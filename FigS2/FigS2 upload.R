@@ -1,7 +1,5 @@
 rm(list = ls())
 options(stringsAsFactors = F)
-setwd('D://Lab/revise相关/nature/')
-### data format ###
 library(pheatmap)
 library(GSVA)
 exp = read.csv("AAV-CBLN1-OE-TPM-oder.csv",header=T,row.names = 1)
@@ -43,5 +41,6 @@ pheatmap(AR_exp,
          annotation_names_row = TRUE, annotation_names_col = TRUE)
 
 write.csv(AR_exp,file = "AR_score_heatmap.csv")
+
 
 
